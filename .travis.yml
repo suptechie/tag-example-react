@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+  - "14"
+before_install:
+- npm install -g yarn
+install: yarn
+
+script:
+  - yarn test
+  - yarn build
+
+after_success:
+  - yarn semantic-release
+
